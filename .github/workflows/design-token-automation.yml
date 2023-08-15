@@ -18,9 +18,16 @@ jobs:
         with:
           node-version: 14
 
-      - name: Install Dependencies
-        run: npm install
+      - name: Print Working Directory
+        run: pwd
+
+      - name: Show package.json and npm install output
+        run: |
+          cat package.json
+          npm install
+
+      - name: List Installed Dependencies
+        run: npm list
 
       - name: Run build-tokens.cjs
         run: node build-tokens.cjs
-
