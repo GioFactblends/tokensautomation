@@ -26,14 +26,12 @@ StyleDictionary.registerFormat({
   name: 'myCustomFormat',
   formatter: function ({ dictionary, file, options }) {
     const { outputReferences } = options;
-    return `${fileHeader({ file })}:root {
-${formattedVariables({ format: 'css', dictionary, outputReferences })}
-}`;
+    return `${fileHeader({ file })}:root {${formattedVariables({ format: 'css', dictionary, outputReferences })}}`;
   },
 });
 
 const sd = StyleDictionary.extend({
-  source: ['**/*.json'],
+  source: ['design-tokens.json'],
   platforms: {
     css: {
       transformGroup: 'tokens-studio',
