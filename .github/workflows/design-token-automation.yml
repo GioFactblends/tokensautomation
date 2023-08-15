@@ -21,5 +21,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Transform Design Tokens
-        run: node transform-tokens.js
+      - name: Run build-tokens.cjs
+        run: node build-tokens.cjs
+
