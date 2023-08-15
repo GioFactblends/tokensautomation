@@ -6,7 +6,7 @@
     "build-tokens": "node build-tokens.cjs"
   },
   "dependencies": {
-    "style-dictionary": "^2.16.0",
+    "style-dictionary": "^3.8.0",
     "@tokens-studio/sd-transforms": "^1.2.0"  
   }
 }
