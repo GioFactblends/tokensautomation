@@ -18,19 +18,8 @@ jobs:
         with:
           node-version: 14
 
-      - name: Change to Repository Root Directory
-        run: cd $GITHUB_WORKSPACE
-
-      - name: Print Working Directory
-        run: pwd
-
-      - name: Show package.json and npm install output
-        run: |
-          cat package.json
-          npm install
-
-      - name: List Installed Dependencies
-        run: npm list
+      - name: Install Dependencies
+        run: npm install
 
       - name: Run build-tokens.cjs
         run: node build-tokens.cjs
