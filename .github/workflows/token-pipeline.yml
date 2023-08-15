@@ -23,26 +23,3 @@ jobs:
       - name: Run Token Transformer
         run: node build-tokens.cjs
 
-  copy_tokens:
-    runs-on: ubuntu-latest
-    needs: [build_tokens]
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Create Build Directories
-        run: mkdir -p build/css build/js
-
-      - name: Copy CSS Tokens
-        run: cp build/css/* build/
-
-      - name: Configure Git
-        run: |
-          git config --local user.email "jirayoos.pat@factsblend.com"
-          git config --local user.name "GioFactblends"
-
-      - name: Commit CSS Tokens
-        run: |
-          git add build/
-          git commit -m "Copy CSS tokens"
-          git push
