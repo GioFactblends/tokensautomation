@@ -18,6 +18,9 @@ jobs:
         with:
           node-version: 14
 
+      - name: Change to Repository Root Directory
+        run: cd $GITHUB_WORKSPACE
+
       - name: Print Working Directory
         run: pwd
 
