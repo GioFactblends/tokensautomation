@@ -4,7 +4,7 @@ const { registerTransforms } = require('@tokens-studio/sd-transforms');
 // sd-transforms, 2nd parameter for options can be added
 // See docs: https://github.com/tokens-studio/sd-transforms
 registerTransforms(StyleDictionary, {
-  expand: { composition: true, typography: true, border: false, shadow: false },
+  expand: { composition: true, typography: true, border: true, shadow: true },
   excludeParentKeys: true,
 });
 
