@@ -6,11 +6,32 @@ on:
       - main
 
 jobs:
-  copy_tokens:
+  build_tokens:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Token Transformer
+        run: node build-tokens.cjs
+
+  copy_tokens:
+    runs-on: ubuntu-latest
+    needs: [build_tokens]
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Create Build Directories
+        run: mkdir -p build/css build/js
 
       - name: Copy CSS Tokens
         run: cp build/css/* build/
