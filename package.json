@@ -1,0 +1,13 @@
+{
+  "name": "tokensautomation",
+  "version": "1.0.0",
+  "description": "A description of your project",
+  "scripts": {
+    "build-tokens": "node build-tokens.cjs"
+  },
+  "dependencies": {
+    "style-dictionary": "^2.16.0",
+    "@tokens-studio/sd-transforms": "^1.2.0"  
+  }
+}
+
