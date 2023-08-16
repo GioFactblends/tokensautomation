@@ -44,16 +44,6 @@ const sd = StyleDictionary.extend({
         },
       ],
     },
-    js: {
-      transformGroup: 'tokens-studio',
-      buildPath: 'build/js/',
-      files: [
-        {
-          destination: 'variables.js',
-          format: 'javascript/es6',
-        },
-      ],
-    },
   },
 });
 sd.cleanAllPlatforms(); // optionally, cleanup files first..
