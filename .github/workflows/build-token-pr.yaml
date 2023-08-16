@@ -29,4 +29,4 @@ jobs:
           destination_branch: 'main'
           pr_title: 'Design Tokens Update'
           pr_body: '🎨 Design tokens were updated. This PR was created to update the code.'
-          github_token: ${{ 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 }}
+          github_token: ${{ secrets.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 }}
