@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 08:56:52 GMT
+ * Generated on Wed, 16 Aug 2023 09:03:28 GMT
  */
 
 export const boxDropshadowColor = "#0000000d";
