@@ -1,7 +1,7 @@
 {
   "Global": {
     "outlineDashStroke": {
-      "value": "#f00",
+      "value": "#0022ef",
       "type": "color"
     },
     "bg-gray-50": {
@@ -580,5 +580,11 @@
         "type": "dimension"
       }
     }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "Global"
+    ]
   }
 }
