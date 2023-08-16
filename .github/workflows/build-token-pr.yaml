@@ -22,3 +22,15 @@ jobs:
 
       - name: Run Token Transformer
         run: node build-tokens.cjs
+
+      - name: Commit files
+        run: |
+          git config --local user.email "jirayoos.pat@factsblend.com"
+          git config --local user.name "GioFactblends"
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          repository: GioFactblends/tokensautomation
+          force: true
