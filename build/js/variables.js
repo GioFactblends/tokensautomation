@@ -1,9 +1,9 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 05:26:01 GMT
+ * Generated on Wed, 16 Aug 2023 05:33:39 GMT
  */
 
-export const outlineDashStroke = "#f00";
+export const outlineDashStroke = "#0022ef";
 export const bgGray50 = "#f9fbfd";
 export const grayWhite = "#ffffff";
 export const grayBgColor = "#f9fafa";
