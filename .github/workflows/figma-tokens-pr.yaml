@@ -28,3 +28,10 @@ jobs:
           author_email: jirayoos.pat@factsblend.com
           message: 'chore: style-dictionary output'
           add: '.'
+
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: 'main'
+          pr_title: 'Figma Tokens Update'
+          pr_body: '🎨 Design tokens were updated. This PR was created to update the code.'
