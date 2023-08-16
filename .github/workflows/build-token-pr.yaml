@@ -29,4 +29,4 @@ jobs:
           destination_branch: 'main'
           pr_title: 'Design Tokens Update'
           pr_body: '🎨 Design tokens were updated. This PR was created to update the code.'
-          github_token: ${{ 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 }} # Replace with your GitHub personal access token
+          github_token: ${{ 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 }} # Replace with your GitHub personal access token
