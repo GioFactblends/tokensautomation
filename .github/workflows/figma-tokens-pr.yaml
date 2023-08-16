@@ -1,37 +1,38 @@
-name: Process Figma Tokens PR
+name: Token Pipeline
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  run_if: # only if base branch is "figma-tokens"
-    if: ${{ github.head_ref == 'main' }}
-    name: Process Figma Tokens
+  build_tokens:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
     steps:
-      # checkout to the head of this PR
-      - uses: actions/checkout@master
+      - name: Checkout Repository
+        uses: actions/checkout@v2
         with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18'
 
       - name: Install Dependencies
         run: npm install
 
-      - name: Run token-transformer
-        run: node build-tokens.cjs  
+      - name: Run Token Transformer
+        run: node build-tokens.cjs
 
-      - name: Commit changes
-        uses: EndBug/add-and-commit@v9
+      - name: Commit files
+        run: |
+          git config --local user.email "jirayoos.pat@factsblend.com"
+          git config --local user.name "GioFactblends"
+          git commit -a -m "Add changes"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          author_name: GioFactblends
-          author_email: jirayoos.pat@factsblend.com
-          message: 'chore: style-dictionary output'
-          add: '.'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
-      - name: Create Pull Request
-        uses: repo-sync/pull-request@v2
-        with:
-          destination_branch: 'main'
-          pr_title: 'Figma Tokens Update'
-          pr_body: '🎨 Design tokens were updated. This PR was created to update the code.'
