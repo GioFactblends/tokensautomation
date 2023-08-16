@@ -1,4 +1,4 @@
-name: Token Pipeline
+name: Token Pipeline and Pull Request
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build_tokens:
+  build_and_pull_request:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '18'
+          node-version: '14'
 
       - name: Install Dependencies
         run: npm install
@@ -23,3 +23,10 @@ jobs:
       - name: Run Token Transformer
         run: node build-tokens.cjs
 
+      - name: Create Pull Request
+        uses: repo-sync/pull-request@v2
+        with:
+          destination_branch: 'main'
+          pr_title: 'Design Tokens Update'
+          pr_body: '🎨 Design tokens were updated. This PR was created to update the code.'
+          github_token: ${{ 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 }}
