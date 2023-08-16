@@ -820,6 +820,10 @@
     "xxxl": {
       "value": "36",
       "type": "spacing"
+    },
+    "radius-xxs": {
+      "value": "4",
+      "type": "borderRadius"
     }
   },
   "$themes": [],
