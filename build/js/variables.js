@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 09:03:28 GMT
+ * Generated on Wed, 16 Aug 2023 09:04:16 GMT
  */
 
 export const boxDropshadowColor = "#0000000d";
@@ -354,3 +354,4 @@ export const xl = "24px";
 export const xxl = "32px";
 export const xxxl = "36px";
 export const radiusXxs = "4px";
+export const xxxxxl = "44px";
