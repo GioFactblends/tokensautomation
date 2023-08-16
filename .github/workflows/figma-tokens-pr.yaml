@@ -27,7 +27,7 @@ jobs:
         run: |
           git config --local user.email "factsblend-actions[bot]@users.noreply.factsblend.com"
           git config --local user.name "factsblend-actions[bot]"
-          git commit -a -m ${{ github.event.head_commit.message }}
+          git commit -a -m "${{ github.event.head_commit.message }}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
