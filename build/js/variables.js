@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Aug 2023 05:37:51 GMT
+ * Generated on Wed, 16 Aug 2023 08:12:18 GMT
  */
 
 export const outlineDashStroke = "#0022ef";
