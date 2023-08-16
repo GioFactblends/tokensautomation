@@ -1,7 +1,7 @@
 {
   "Global": {
     "outlineDashStroke": {
-      "value": "#000",
+      "value": "#ff0303",
       "type": "color"
     },
     "bg-gray-50": {
