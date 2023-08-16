@@ -31,7 +31,7 @@ StyleDictionary.registerFormat({
 });
 
 const sd = StyleDictionary.extend({
-  source: ['tokensautomation/tokens/design-tokens.json'],
+  source: ['tokens/design-tokens.json'],
   platforms: {
     css: {
       transformGroup: 'tokens-studio',
