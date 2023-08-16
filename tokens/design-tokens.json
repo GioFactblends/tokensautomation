@@ -824,6 +824,10 @@
     "radius-xxs": {
       "value": "4",
       "type": "borderRadius"
+    },
+    "xxxxxl": {
+      "value": "44",
+      "type": "spacing"
     }
   },
   "$themes": [],
